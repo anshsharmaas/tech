@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+.last > h3 {
+  font-family: "Dancing Script", cursive;
+  color: white;
+  font-weight: 200;
+  text-align: center;
+}
+.last {
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+}

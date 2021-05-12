@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bilbo&family=Calligraffitti&display=swap");
+@font-face {
+  font-family: "Agustina Regular";
+  src: url("./Agustina.woff");
+}
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+.navbar {
+  z-index: 2;
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar_container > h1 {
+  font-family: "Dancing Script", cursive;
+
+  color: white;
+  padding: 0 20px 5px 20px;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  padding: 10px 20px;
+}
+nav {
+  background-color: #4a00e0;
+  padding: 10px;
+  width: 50px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.6s linear;
+}
+nav.active {
+  width: 250px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 0.6s linear;
+}
+nav.active ul {
+  width: 100%;
+}
+nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+nav ul a {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+nav ul a:hover {
+  border-bottom: 2px solid #fff;
+}
+.icon {
+  background-color: #4a00e0;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+.icon:focus {
+  outline: 0;
+}
+.icon .line {
+  background-color: #fff;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transform 0.6s linear;
+}
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+nav.active .icon .line2 {
+  transform: rotate(770deg) translateY(-5.5px);
+}
+
+@media (max-width: 600px) {
+  nav {
+    position: absolute;
+    right: 0;
+    margin-bottom: 30px;
+  }
+
+  nav.active {
+    position: absolute;
+    width: 95%;
+
+    height: 60px;
+  }
+  .navbar_container {
+    padding: 10px 0px;
+  }
+}
+.navbar_logo {
+  height: 200px;
+}

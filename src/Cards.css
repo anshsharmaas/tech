@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300&display=swap");
+
+.card {
+  position: relative;
+
+  width: 300px;
+  margin: 10px;
+  height: auto;
+}
+
+.card_container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 2px rgba(0, 0, 0, 0.6) solid;
+  border-radius: 4px;
+}
+
+.card_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.card_overlay:hover {
+  opacity: 1;
+}
+.card_overlay > * {
+  font-family: "Roboto Slab", serif;
+  transform: translateY(20px);
+  transition: transform 0.5s;
+}
+.card_overlay:hover > * {
+  transform: translateY(0);
+}
+.card_title {
+  padding: 9px 0;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.button {
+  border-radius: 5px;
+  border: 2px solid teal;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.06em;
+}
+.button:focus {
+  outline: 0;
+}

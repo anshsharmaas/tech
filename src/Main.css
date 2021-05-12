@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  flex-direction: column;
+  height: 70vh;
+}
+.main_container {
+  margin-bottom: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65vh;
+}
+.main_container > h2 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.9rem;
+  margin-top: 4px;
+}

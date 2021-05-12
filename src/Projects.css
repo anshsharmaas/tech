@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Rajdhani&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.projects {
+  height: 100vh;
+
+  display: grid;
+
+  background: #59c173; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5d26c1,
+    #a17fe0,
+    #59c173
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5d26c1, #a17fe0, #59c173);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  justify-content: center;
+  align-items: center;
+}
+.projects_container {
+  height: 80vh;
+  width: auto;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.8)
+  );
+
+  border-radius: 10px;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(2rem);
+  backdrop-filter: blur(2rem);
+}
+.projects > h1 {
+  margin-bottom: 20px;
+  /* font-family: "Barlow Condensed", sans-serif; */
+  font-family: "Rajdhani", sans-serif;
+}
+.cards_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projects > h1 {
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .cards_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .projects_container {
+    height: 100%;
+  }
+  .projects {
+    height: 100%;
+  }
+}
+.typed {
+  display: flex;
+  justify-content: center;
+
+  font-family: "Rajdhani", sans-serif;
+  font-size: xx-large;
+}
+@media (min-width: 808px) and (max-width: 1080px) {
+  .cards_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.typed {
+  font-family: "Pacifico", cursive !important;
+}
